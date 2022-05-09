@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require('dotenv').config();
 
 module.exports = {
   solidity: {
@@ -14,5 +15,14 @@ module.exports = {
         }
       }
     },
+  },
+  networks: {
+    rinkeby: {
+      url: process.env.RINKEBY_URL || "",
+      accounts:
+        process.env.DEPLOY_PRIVATE_KEY_TESTNET !== undefined
+          ? [process.env.DEPLOY_PRIVATE_KEY_TESTNET]
+          : [],
+    }
   },
 };
