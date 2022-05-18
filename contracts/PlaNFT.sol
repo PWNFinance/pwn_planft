@@ -22,12 +22,12 @@ contract PlaNFT is ERC721 {
 
 
 	function _baseURI() internal view virtual override returns (string memory) {
-		return "TODO";
+		return "ipfs://QmS3SMaW6dRiFfC6CKwm5esHYjvggr22rKGBK545JU4eLi/";
 	}
 
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
 		require(_exists(tokenId), "Token id does not exist");
-		return string(abi.encodePacked(_baseURI(), tokenId.toString()));
+		return string(abi.encodePacked(_baseURI(), tokenId.toString(), ".json"));
 	}
 
 	function growPlaNFT() external {
