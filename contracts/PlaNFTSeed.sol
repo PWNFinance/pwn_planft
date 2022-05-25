@@ -9,7 +9,7 @@ contract PlaNFTSeed is ERC20, AccessControl {
 	bytes32 public constant SEED_MINTER = keccak256("SEED_MINTER");
 
 
-	constructor() ERC20("PlaNFTSeed", "PNFTS") {
+	constructor() ERC20("PlaNFTSeed", "PSEED") {
 		_grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
 		_grantRole(SEED_MINTER, msg.sender);
 	}
