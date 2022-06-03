@@ -7,7 +7,7 @@ async function main() {
 
 	console.log(` ⏳ Granting SEED_MINTER role to ${addr}`);
 
-	const plaNFTSeed = await hardhat.ethers.getContractAt("PlaNFTSeed", "0x86D890cd01029394BE9f2B8890109d99236b54a1");
+	const plaNFTSeed = await hardhat.ethers.getContractAt("PlaNFTSeed", "0x204b870D50DDC407CC27485777A6302a321fc72b");
 
 	await plaNFTSeed.grantRole(await plaNFTSeed.SEED_MINTER(), addr);
 
