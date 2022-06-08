@@ -9,7 +9,7 @@ contract PlaNFT is ERC721 {
 	using Strings for uint256;
 
 	uint256 constant public PLANFT_PRICE = 100e18;
-	uint256 constant public MAX_PLANFT = 500;
+	uint256 constant public MAX_PLANFT = 5000;
 
 	uint256 public lastId;
 
@@ -22,7 +22,7 @@ contract PlaNFT is ERC721 {
 
 
 	function _baseURI() internal view virtual override returns (string memory) {
-		return "ipfs://QmS3SMaW6dRiFfC6CKwm5esHYjvggr22rKGBK545JU4eLi/";
+		return "ipfs://QmbEgGYK8ZEMfzQddAoSP6fZjNDZQiRp3kpivNAEyJsYMH/";
 	}
 
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
