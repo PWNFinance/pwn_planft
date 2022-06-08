@@ -23,6 +23,13 @@ module.exports = {
         process.env.DEPLOY_PRIVATE_KEY_TESTNET !== undefined
           ? [process.env.DEPLOY_PRIVATE_KEY_TESTNET]
           : [],
+    },
+    polygon: {
+      url: process.env.POLYGON_URL || "",
+      accounts:
+        process.env.DEPLOY_PRIVATE_KEY_MAINNET !== undefined
+          ? [process.env.DEPLOY_PRIVATE_KEY_MAINNET]
+          : [],
     }
   },
 };
